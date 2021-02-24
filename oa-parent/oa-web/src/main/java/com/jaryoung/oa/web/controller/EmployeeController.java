@@ -1,5 +1,6 @@
 package com.jaryoung.oa.web.controller;
 
+import com.jaryoung.oa.common.util.JsonUtil;
 import com.jaryoung.oa.org.entity.*;
 import com.jaryoung.oa.org.service.*;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,7 @@ public class EmployeeController {
      */
     @GetMapping("selectOne")
     public Employee selectOne(Integer id) {
+        System.out.println(JsonUtil.hello());
         return this.employeeService.queryById(id);
     }
 

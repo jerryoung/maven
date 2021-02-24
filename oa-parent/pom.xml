@@ -16,18 +16,20 @@
         <module>oa-flow</module>
         <module>oa-web</module>
     </modules>
+
     <distributionManagement>
         <repository>
-            <id>nx-releases</id>
+            <id>nexus-releases</id>
             <name>Releases</name>
-            <url>http://localhost:8090/repository/maven-public/</url>
+            <url>http://localhost:8090/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nx-snapshots</id>
+            <id>nexus-snapshots</id>
             <name>Snapshot</name>
-            <url>http://localhost:8090/repository/maven-public/</url>
+            <url>http://localhost:8090/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springframework.release.version>5.0.6.RELEASE</springframework.release.version>

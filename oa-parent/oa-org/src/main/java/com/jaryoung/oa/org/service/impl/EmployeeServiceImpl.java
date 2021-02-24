@@ -1,6 +1,5 @@
 package com.jaryoung.oa.org.service.impl;
 
-import com.jaryoung.oa.common.util.JsonUtil;
 import com.jaryoung.oa.org.entity.Employee;
 import com.jaryoung.oa.org.dao.EmployeeDao;
 import com.jaryoung.oa.org.service.EmployeeService;
@@ -28,7 +27,6 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public Employee queryById(Integer id) {
-        System.out.println(JsonUtil.hello());
         return this.employeeDao.queryById(id);
     }
 
