@@ -5,9 +5,8 @@ import com.jaryoung.oa.auth.service.AuthorizationService;
 import com.jaryoung.oa.common.util.JsonUtil;
 import com.jaryoung.oa.flow.entity.Application;
 import com.jaryoung.oa.flow.service.ApplicationService;
-import com.jaryoung.oa.org.entity.*;
-import com.jaryoung.oa.org.service.*;
-import org.springframework.stereotype.Controller;
+import com.jaryoung.oa.org.entity.Employee;
+import com.jaryoung.oa.org.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,7 +17,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2021-02-24 17:48:24
  */
-@Controller
+@RestController
 @RequestMapping("/oa/")
 public class Api {
     public static final String OK = "ok";
@@ -33,24 +32,24 @@ public class Api {
     private AuthorizationService authorizationService;
 
     @PostMapping("/createEmployee")
-    public Employee createEmployee(Employee employee) {
+    public Employee createEmployee(@RequestBody Employee employee) {
         System.out.println(JsonUtil.hello());
         return this.employeeService.insert(employee);
     }
 
     @PostMapping("/authorization")
-    public Authorization authorization(Authorization authorization) {
+    public Authorization authorization(@RequestBody Authorization authorization) {
         return this.authorizationService.insert(authorization);
     }
 
     @PostMapping("/unAuthorization")
-    public String unAuthorization(Integer id) {
+    public String unAuthorization(@RequestParam Integer id) {
         this.authorizationService.deleteById(id);
         return OK;
     }
 
     @PostMapping("/application")
-    public Application application(Application application) {
+    public Application application(@RequestBody Application application) {
         return this.applicationService.insert(application);
     }
 

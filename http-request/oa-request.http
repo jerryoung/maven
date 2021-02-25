@@ -1,0 +1,45 @@
+###
+POST http://localhost:8080/oa/createEmployee
+Content-Type: application/json
+Accept: application/json
+
+{
+"name": "李四",
+"age": 19
+}
+
+
+###
+POST http://localhost:8080/oa/authorization
+Content-Type: application/json
+Accept: application/json
+
+{
+  "employeeId": 44,
+  "roleId": 1
+}
+
+
+###
+POST http://localhost:8080/oa/unAuthorization?id=29
+Content-Type: application/json
+Accept: application/json
+
+
+
+###
+POST http://localhost:8080/oa/application
+Content-Type: application/json
+Accept: application/json
+
+{
+  "employeeId": 44,
+  "days": 12
+}
+
+
+
+
+
+
+
