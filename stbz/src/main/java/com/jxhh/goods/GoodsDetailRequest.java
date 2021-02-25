@@ -29,19 +29,16 @@ public class GoodsDetailRequest implements InterFaceRequest {
 
 	@Override
 	public RequestMethod getMethed() {
-		// TODO Auto-generated method stub
 		return RequestMethod.GET;
 	}
 
 	@Override
 	public String getUrl() {
-		// TODO Auto-generated method stub
 		return "/v2/Goods/Detail";
 	}
 
 	@Override
 	public TreeMap<String, Object> getParams() throws MustParamsException {
-		// TODO Auto-generated method stub
 
 		if(null == getId()) throw new MustParamsException("对象GoodsDetail: id不能为空");
 		TreeMap<String, Object> params = new TreeMap<String,Object>();

@@ -13,7 +13,6 @@ public class Sha1Utils {
 			try {
 				mDigest = MessageDigest.getInstance("SHA1");
 			} catch (NoSuchAlgorithmException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				throw new RuntimeException("没有这个sha1算法?");
 			}

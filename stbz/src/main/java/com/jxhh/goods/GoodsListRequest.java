@@ -205,19 +205,16 @@ public class GoodsListRequest implements InterFaceRequest{
 
 	@Override
 	public RequestMethod getMethed() {
-		// TODO Auto-generated method stub
 		return RequestMethod.GET;
 	}
 
 	@Override
 	public String getUrl() {
-		// TODO Auto-generated method stub
 		return "/v2/Goods/Lists";
 	}
 
 	@Override
 	public TreeMap<String, Object> getParams() throws MustParamsException {
-		// TODO Auto-generated method stub
 		TreeMap<String, Object> paramsMap = new TreeMap<String, Object>();
 		if(null == getPage()) throw new MustParamsException("对象GoodsList: page不能为空");
 		if(null == getLimit()) throw new MustParamsException("对象GoodsList: limit不能为空");
