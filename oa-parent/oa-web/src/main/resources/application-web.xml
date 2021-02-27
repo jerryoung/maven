@@ -4,6 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="classpath*:application-org.xml" />
-    <import resource="classpath*:application-auth.xml" />
+    <import resource="classpath*:src/main/profiles/dev/application-auth.xml" />
     <import resource="classpath*:application-flow.xml" />
 </beans>

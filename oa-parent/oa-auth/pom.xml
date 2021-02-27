@@ -154,6 +154,13 @@
                 </includes>
                 <filtering>true</filtering>
             </resource>
+            <resource>
+                <directory>src/main/profiles/${env}</directory>
+                <includes>
+                    <include>/**</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
         </resources>
     </build>
 
@@ -177,6 +184,7 @@
                 <jdbc.url>jdbc:mysql://test:3306/oa</jdbc.url>
                 <jdbc.username>root</jdbc.username>
                 <jdbc.password>123456</jdbc.password>
+                <env>test</env>
             </properties>
         </profile>
         <profile>
@@ -186,6 +194,7 @@
                 <jdbc.url>jdbc:mysql://prod:3306/oa</jdbc.url>
                 <jdbc.username>root</jdbc.username>
                 <jdbc.password>123456</jdbc.password>
+                <env>prod</env>
             </properties>
         </profile>
     </profiles>

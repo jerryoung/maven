@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:/application-auth.xml"})
+@ContextConfiguration(locations = {"classpath*:/src/main/profiles/dev/application-auth.xml"})
 public class AuthorizationServiceTest {
     @Autowired
     private AuthorizationService authorizationService;
